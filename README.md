@@ -1,2 +1,2 @@
 # mSelection
-Modified version of mSelection originally developed by Kalcor/Kyeman
+Modified version/fork of mSelection originally developed by Kalcor/Kyeman
