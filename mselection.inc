@@ -1,9 +1,9 @@
-//
-// Model Selection using previews. For SA-MP 0.3x and above.
-// - D0erfler 2013
-// - Kye 2013
-//
-// Version 1.1 R2
+/**
+*   Model Selection using previews. For SA-MP 0.3x and above.
+*   - D0erfler 2013
+*   - Kye 2013
+*   Version 1.1 R2
+*/
 
 /*
 * Functions to be used
@@ -384,18 +384,18 @@ stock ShowModelSelectionMenu(playerid, ListID, const header_text[], dialogBGcolo
 /// <summary>
 /// Shows a preview model selection menu for a player with extra parameters.
 /// </summary>
-/// <param name="playerid">The ID of the player for whom to show the selection menu.</param>
-/// <param name="const items_array[]">The array of items/model IDs.</param>
-/// <param name="item_amount">The number of items to be shown to the player.</param>
-/// <param name="const header_text[]">The heading text of the selection menu.</param>
+/// <param name="playerid">The ID of the player for whom to show the selection menu</param>
+/// <param name="const items_array[]">The array of items/model IDs</param>
+/// <param name="item_amount">The number of items to be shown to the player</param>
+/// <param name="const header_text[]">The heading text of the selection menu</param>
 /// <param name="extraid">extraid which gets passed to OnPlayerModelSelectionEx after selection</param>
-/// <param name="Float:Xrot = 0.0">The X rotation of the preview model.</param>
-/// <param name="Float:Yrot = 0.0">The Y rotation of the preview model.</param>
-/// <param name="Float:Zrot = 0.0">The Z rotation of the preview model.</param>
-/// <param name="Float:mZoom = 1.0">The zoom of the preview model (default is 1.0).</param>
-/// <param name="dialogBGcolor = 0x4A5A6BBB">The background color of the menu (default is 0x4A5A6BBB).</param>
-/// <param name="previewBGcolor = 0x88888899">The background color of the preview model (default is 0x88888899).</param>
-/// <param name="tdSelectionColor = 0xFFFF00AA">The hover color of the items (default is 0xFFFF00AA).</param>
+/// <param name="Float:Xrot = 0.0">The X rotation of the preview model</param>
+/// <param name="Float:Yrot = 0.0">The Y rotation of the preview model</param>
+/// <param name="Float:Zrot = 0.0">The Z rotation of the preview model</param>
+/// <param name="Float:mZoom = 1.0">The zoom of the preview model (default is 1.0)</param>
+/// <param name="dialogBGcolor = 0x4A5A6BBB">The background color of the menu (default is 0x4A5A6BBB)</param>
+/// <param name="previewBGcolor = 0x88888899">The background color of the preview model (default is 0x88888899)</param>
+/// <param name="tdSelectionColor = 0xFFFF00AA">The hover color of the items (default is 0xFFFF00AA)</param>
 /// <returns></returns>
 stock ShowModelSelectionMenuEx(playerid, const items_array[], item_amount, const header_text[], extraid, Float:Xrot = 0.0, Float:Yrot = 0.0, Float:Zrot = 0.0, Float:mZoom = 1.0, dialogBGcolor = 0x4A5A6BBB, previewBGcolor = 0x88888899, tdSelectionColor = 0xFFFF00AA) {
     mS_DestroySelectionMenu(playerid);
@@ -440,7 +440,7 @@ stock ShowModelSelectionMenuEx(playerid, const items_array[], item_amount, const
 /// <summary>
 /// Hides the selection menu for a specific player.
 /// </summary>
-/// <param name="playerid">The ID of the player for whom to hide the selection menu.</param>
+/// <param name="playerid">The ID of the player for whom to hide the selection menu</param>
 /// <returns></returns>
 stock HideModelSelectionMenu(playerid) {
     mS_DestroySelectionMenu(playerid);
@@ -526,7 +526,7 @@ forward MP_OPC(playerid);
 /// the Escape (ESC) key.
 /// </summary>
 /// <param name="playerid">The ID of the player that clicked on the textdraw</param>
-/// <param name="Text:clickedid">The ID of the clicked textdraw. <b><c>INVALID_TEXT_DRAW</c></b> if selection
+/// <param name="Text:clickedid">The ID of the clicked textdraw <b><c>INVALID_TEXT_DRAW</c></b> if selection
 /// was cancelled</param>
 /// <returns></returns>
 public OnPlayerClickTextDraw(playerid, Text:clickedid) {
@@ -567,8 +567,8 @@ forward MP_OPCTD(playerid, Text:clickedid);
 /// <summary>
 /// Called whenever a player clicks a clickable textdraw.
 /// </summary>
-/// <param name="playerid">The ID of the player who clicked the textdraw.</param>
-/// <param name="PlayerText:playertextid">The ID of the clicked textdraw.</param>
+/// <param name="playerid">The ID of the player who clicked the textdraw</param>
+/// <param name="PlayerText:playertextid">The ID of the clicked textdraw</param>
 /// <returns>
 ///    Returning <b><c>1</c></b> in this callback will prevent it from being called in other scripts. This
 ///    should be used to signal that the textdraw on which they clicked was 'found' and no further processing
@@ -670,7 +670,7 @@ forward MP_OPCPTD(playerid, PlayerText:playertextid);
 /// <summary>
 /// Loads a menu with model previews from a file.
 /// </summary>
-/// <param name="f_name">The path of the file in the scriptfiles folder.</param>
+/// <param name="f_name">The path of the file in the scriptfiles folder</param>
 /// <returns>
 ///   <b><c>1</c></b>: The function executed successfully.<br />
 ///   <b><c>0</c></b>: The function failed to execute. The specified file does not exist.
